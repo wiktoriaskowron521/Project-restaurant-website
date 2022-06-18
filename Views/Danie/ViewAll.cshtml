@@ -1,0 +1,59 @@
+﻿@model IEnumerable<restauracjaTI.Models.DbModels.Danie>
+
+@{
+    ViewBag.Title = "ViewAll";
+}
+
+<div clsss="container-main">
+    <h2>Lista dań</h2>
+    <p>Oto lista naszych wspaniałych dań, z których każdy znajdzie coś dla siebie. &#127837;</p>
+    <p>
+        @Html.ActionLink("Dodaj nowe danie", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RodzajDania.NazwaRodzaju)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NazwaDania)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpisDania)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CenaDania)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bestseller)
+            </th>
+            <th>Kontrolery</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RodzajDania.NazwaRodzaju)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NazwaDania)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OpisDania)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CenaDania)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bestseller)
+                </td>
+                <td>
+                    @Html.ActionLink("Edytuj", "Edit", new { id = item.DanieId }) |
+                    @Html.ActionLink("Usuń", "Delete", new { id = item.DanieId })
+
+                </td>
+            </tr>
+        }
+    </table>
+</div>

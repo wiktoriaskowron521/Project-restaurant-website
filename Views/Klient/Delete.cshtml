@@ -1,0 +1,84 @@
+﻿@model restauracjaTI.Models.DbModels.Klient
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="container-main">
+    <h2>Usuń klienta</h2>
+
+    <h3>Jesteś pewien że chcesz usunąć naszego klienta?</h3>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Imie)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Imie)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Nazwisko)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nazwisko)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Ulica)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Ulica)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Miasto)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Miasto)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.KodPocztowy)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.KodPocztowy)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Telefon)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Telefon)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Poczta)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Poczta)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Usuń" class="btn btn-default" /> |
+                @Html.ActionLink("Wróć do listy klientów", "ViewAll")
+            </div>
+        }
+    </div>
+</div>
+
+

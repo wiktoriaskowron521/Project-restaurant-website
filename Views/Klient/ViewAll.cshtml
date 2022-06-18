@@ -1,0 +1,74 @@
+﻿@model IEnumerable<restauracjaTI.Models.DbModels.Klient>
+
+@{
+    ViewBag.Title = "ViewAll";
+}
+
+<div class="container-main">
+
+    <h2>Lista klentów</h2>
+    <p>Nasi wspaniali klienci, dzięki którym możemy rozwijać naszą restauracje. &#128170;</p>
+    <p>
+        @Html.ActionLink("Dodaj nowego klienta", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Imie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nazwisko)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ulica)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Miasto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KodPocztowy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Poczta)
+            </th>
+            <th>kontrolery</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Imie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nazwisko)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ulica)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Miasto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KodPocztowy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefon)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Poczta)
+                </td>
+                <td>
+                    @Html.ActionLink("Edytuj", "Edit", new { id = item.KlientId }) |
+                    @Html.ActionLink("Usuń", "Delete", new { id = item.KlientId })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>
+

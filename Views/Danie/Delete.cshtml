@@ -1,0 +1,68 @@
+﻿@model restauracjaTI.Models.DbModels.Danie
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="container-main">
+
+    <h2>Usuń Danie</h2>
+
+    <h3>Jesteś pewnien że chcesz usunąć danie? Nie będziesz mógł go później przywrócić</h3>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.RodzajDania.NazwaRodzaju)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.RodzajDania.NazwaRodzaju)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NazwaDania)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NazwaDania)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OpisDania)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OpisDania)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CenaDania)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CenaDania)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Bestseller)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Bestseller)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Usuń" class="btn btn-default" /> |
+                @Html.ActionLink("Wróć do listy dań", "ViewAll")
+            </div>
+        }
+    </div>
+
+</div>

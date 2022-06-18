@@ -1,0 +1,43 @@
+﻿@model IEnumerable<restauracjaTI.Models.DbModels.SzczegolyZamowienia>
+
+@{
+    ViewBag.Title = "ViewAll";
+}
+
+<div class="container-main">
+
+    <h2>Szczegóły zamówień</h2>
+
+    <p>
+        @Html.ActionLink("Dodaj szczegóły", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Danie.NazwaDania)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zamowienie.ZamowienieId)
+            </th>
+            <th>kontrolery</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Danie.NazwaDania)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Zamowienie.ZamowienieId)
+                </td>
+                <td>
+                    @Html.ActionLink("Edytuj", "Edit", new { id = item.SzczegolyZamowieniaId }) |
+                    @Html.ActionLink("Usuń", "Delete", new { id = item.SzczegolyZamowieniaId })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>

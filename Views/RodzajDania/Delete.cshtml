@@ -1,0 +1,31 @@
+﻿@model restauracjaTI.Models.DbModels.RodzajDania
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Usuń rodzaj dania</h2>
+
+<h3>Jesteś pewny że chcesz usunąć rodzaj dania?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NazwaRodzaju)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NazwaRodzaju)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Usuń" class="btn btn-default" /> |
+            @Html.ActionLink("Wróć do listy rodzajów dań", "ViewAll")
+        </div>
+    }
+</div>

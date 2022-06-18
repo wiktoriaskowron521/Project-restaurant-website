@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "About";
+}
+
+<h2>Dokumentacja</h2>
+<ul>
+    <li>
+        <h4>Cel</h4>
+        <p>Celem projektu jest stworzenie strony restauracji do użytku pracowników i właścicieli lokalu. Strona umożliwa użytkownikom modyfikacje karty dań, edycje listy klientów oraz rejestracje zamówień.</p>
+    </li>
+    <li>
+        <h4>Zastosowanie biznesowe</h4>
+        <p>Aplikacja może być przydatna w restauracjach, które mają dużo zamówień telefonicznych i osobistych. Po dodaniu odpowiednich przekształceń i udoskonaleń aplikację można przeobrazić w system zamawiania jedzenia online. Dzięki temu długoterminowe oszczędności na prowizcjach płaconych popularnym serwisom mogłyby zostać zainwestowane w rozwój firmy i pracowników. </p>
+    </li>
+    <li>
+        <h4>Opis bazy danych</h4>
+        <p>Baza danych składa się z 5 tabel. Tabela RodzajDania zawiera określone kategorie dania i łączy się relacją jeden do wielu z tabelą Dania, czyli przypisuje kategorie do każdego z dań. Tabela Klient zawiera szczegółowe informacje o klienta i łączy się relacją jeden do wielu z tabelą Zamówienie, które podsumowuje zamówienia każdego klienta. Tabele Dania i Zamowienie łączą się relacją jeden do wielu z tabelą SzczegolyZamowienia, co sprawia, że przypisują zamawiane dania do numeru zamówienia.</p>
+    </li>
+    <li>
+        <h4>Podział obowiązków</h4>
+        <table>
+            <tr>
+                <td>Członkini zespołu</td>
+                <td>Obowiązki</td>
+            </tr>
+            <tr>
+                <td>Maja Witkowska</td>
+                <td>
+                    <ul>
+                        <li>Stworzenie strony startowej</li>
+                        <li>Stworzenie estetycznej strony startowej i drobne zmiany w layoucie strony</li>
+                        <li>Umieszczenie zasobów na stronie, np. obrazków</li>
+                        <li>Zadbanie o estetykę kodu</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Ewelina Wernik</td>
+                <td>
+                    <ul>
+                        <li>Stworzenie bazy danych</li>
+                        <li>Stworzenie kontrolera dla każdego z modeli obsługującego pełny CRUD</li>
+                        <li>Stworzenie seeda do bazy danych</li>
+                        <li>Wykorzystanie atrybutów w klasach np. Display, Key itp</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Wiktoria Skowron</td>
+                <td>
+                    <ul>
+                        <li>Plan podziału pracy</li>
+                        <li>Dokumentacja projektu</li>
+                        <li>Instrukcja użytkownika opisująca korzystanie z aplikacji</li>
+                        <li>Stworzenie bazy danych</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </li>
+    <li>
+        <h4>Kontrolery, widoki, modele i diagram bazy danych</h4>
+        <p>Jeżeli chcesz zobaczyć opis kontrolerów, widoków modelów i diagram bazy danych <a href="https://drive.google.com/file/d/106hU17vsl-_cDswSdxo-N3UnWs37NkPn/view?usp=sharing">Zajrzyj pod ten link.</a> </p>
+    </li>
+</ul>
